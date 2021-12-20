@@ -8,7 +8,7 @@ The webserver is currently sleeping for 10 seconds before returning the response
 
  if (loopCount >= 10)  <== seconds to wait.
  
-Something to point out is that the cancelation is only going to cancel the underlying task for PostAsync(), it's obviously not going to cancel the HTTP request that is already on the server since it has no way to do that. 
+Something to point out is that the cancellation is only going to cancel the underlying task for PostAsync(), it's obviously not going to cancel the HTTP request that is already on the server since it has no way to do that. 
 
 When clicking the Start button, this just runs TaskOne and TaskTwo, both of which just sleep 1 second, post a message that they are running, rinse/repeat. This is just for testing task cancellation outside of the HttpClient code.
 
