@@ -31,15 +31,15 @@ namespace RemoteWebServer.Controllers
             var traceID = Request.HttpContext.TraceIdentifier;
                    
             _logger.LogInformation("{0}: GET | Session:Request: {1}", DateTime.Now.ToLongTimeString(), traceID);
-            bool isComplete = true;
+            bool isComplete = false;
             int loopCount = 0;
 
-            while (isComplete)
+            while (!isComplete)
             {
                 System.Threading.Thread.Sleep(1000);
                 loopCount++;
                 if (loopCount >= 10)    // seconds to wait
-                    isComplete = false;
+                    isComplete = true;
 
                 System.Diagnostics.Debug.Print("Worker iteration {0}", loopCount);
             }
