@@ -4,7 +4,7 @@ Simple testing of UWP and HttpClient.PostAsync()
 
 *Notes*
 
-The webserver is currently sleeping for 10 seconds before returning the response. This is to allow cancelling etc. when running the PostAsync task. To change that to something longer modify line 41 in MainController.cs:
+The webserver is currently sleeping for 10 seconds before returning the response for POST requests. This is to allow cancelling etc. when running the PostAsync task. To change that to something longer modify line 41 in MainController.cs:
 
  if (loopCount >= 10)  <== seconds to wait.
  
