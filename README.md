@@ -19,6 +19,6 @@ To test:
 3. Now build and deploy the UWP app which can be ran from the IDE or separately in the OS.
 4. Click either Start Or PostAsync.
 5. Click Cancel to inform the CancellationToken source that we wish to cancel.
-6. Thread counts are listed in the log window and the bottom right but my GUI thread hack for updating doesn't update the textblock when using PostAsync() - that's OK, as it still gets logged in the log windows. This is how we can prove the tasks were cancelled because we can see the thread count increment/decrement.
+6. Thread counts are listed in the log window and the bottom right but my GUI thread hack for updating doesn't update the textblock when using PostAsync() - that's OK, as it still gets logged in the log window. This is how we can prove the tasks were cancelled because we can see the thread count increment/decrement.
 
 *Note: The server is configured to listen on port 5000 when not in the IDE - if you try to run the web server from the IDE, the UDE app will fail because the port will change to the IISExpress port which isn't 5000; and the UWP app is hardcoded to use 5000.*
