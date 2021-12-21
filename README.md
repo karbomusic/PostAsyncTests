@@ -14,8 +14,8 @@ When clicking the Start button, this just runs TaskOne and TaskTwo, both of whic
 
 To test:
 
-1. Build the remote web server project.
-2. Make sure the UWP App is the startup project.
+1. Make sure the UWP App is the startup project.
+2. Build the remote web server project.
 3. Go into the bin directory for that project and manually launch RemoteWebServer.exe
 4. Now build and deploy the UWP app which can be ran from the IDE or separately in the OS.
 5. Click either Start Or PostAsync.
