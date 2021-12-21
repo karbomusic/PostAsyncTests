@@ -10,6 +10,8 @@ The webserver is currently sleeping for 10 seconds before returning the response
  
 The TaskOne/TaskTwo tests (Start button), run indefinitely. Something to point out is that the cancellation is only going to cancel the underlying task for PostAsync(), it's obviously not going to cancel the HTTP request on the server since it has no way to do that. It's also not guaranteed that HttpClient.PostAsync will immediately cancel since there is no guarantee with cancellation sources. I did prove the task that made the request does cancel though.
 
+I may test this with Wireshark in loopback mode, this will confirm if/when/how HttpClient.PostAsync() reacts to the cancellation of the token.
+
 When clicking the Start button, this just runs TaskOne and TaskTwo, both of which just sleep 1 second, post a message that they are running, rinse/repeat. This is just for testing task cancellation outside of the HttpClient code.
 
 To test:
